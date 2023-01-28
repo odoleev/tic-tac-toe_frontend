@@ -137,13 +137,6 @@ export function Game() {
   }
 
   useEffect(() => {
-    if(isGameFinished) {
-      setMatrix(initialMatrix)
-
-    }
-  }, [isGameFinished])
-
-  useEffect(() => {
     handleGameUpdate();
     handleGameStart();
     handleGameWin();
