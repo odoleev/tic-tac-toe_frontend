@@ -86,8 +86,8 @@ export function Game() {
         setFinishTitle(`It's a tie`);
         setIsGameFinished(true)
       } else if (currentPlayerWon && !otherPlayerWon) {
-        gameService.gameWin(socketService.socket, "You Lost!");
-        setFinishTitle(`You won`);
+        gameService.gameWin(socketService.socket, "You Lost !");
+        setFinishTitle(`You won !`);
         setIsGameFinished(true)
       }
 
