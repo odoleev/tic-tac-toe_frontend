@@ -56,6 +56,21 @@ export const Cell = styled.div<ICellProps>`
   border-bottom: ${({ borderBottom }) =>
     borderBottom && '1px solid transparent'};
   border-right: ${({ borderRight }) => borderRight && '1px solid transparent'};
+  
+  @media (max-width: 600px) {
+    width: 10em;
+    height: 7em;
+  }
+
+  @media (max-width: 500px) {
+    width: 7em;
+    height: 4em;
+  }
+
+  @media (max-width: 350px) {
+    width: 5em;
+    height: 4em;
+  }
 
   &:hover {
     background-color: #f43b47;

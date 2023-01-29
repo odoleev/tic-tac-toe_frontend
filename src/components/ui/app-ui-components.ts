@@ -9,6 +9,10 @@ export const WelcomeText = styled.h1`
   -webkit-animation: 1s ${glow} ease-in-out infinite alternate;
   -moz-animation: 1s ${glow} ease-in-out infinite alternate;
   animation: 1s ${glow} ease-in-out infinite alternate;
+
+  @media (max-width: 600px) {
+    font-size: 60px;
+  }
 `;
 
 export const MainContainer = styled.div`
