@@ -22,6 +22,7 @@ export function Game() {
     isPlayerTurn,
     setGameStarted,
     isGameStarted,
+      setInRoom
   } = useContext(gameContext);
 
   const checkGameState = (matrix: MatrixType) => {
@@ -141,6 +142,14 @@ export function Game() {
     handleGameStart();
     handleGameWin();
   }, []);
+
+  useEffect(() => {
+    if(socketService.socket) {
+      socketService.socket.on('left', () => {
+        setInRoom(false)
+      })
+    }
+  }, [])
 
   return (
     <GameContainer>

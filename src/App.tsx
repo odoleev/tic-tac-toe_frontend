@@ -23,7 +23,10 @@ function App() {
 
   useEffect(() => {
     connectSocket();
+
   }, []);
+
+
 
   const gameContextValue: IGameContextProps = {
     isInRoom,
